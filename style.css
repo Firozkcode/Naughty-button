@@ -1,0 +1,131 @@
+*{
+padding: 0;
+margin: 0;
+transition: .3s ease;
+font-family: sans-serif;
+}
+
+:root{
+    --bg-color: rgb(0, 9, 20);
+    --primary-color: rgb(12, 163, 1);
+}
+
+body{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+background: var(--bg-color);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+color: white;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.container{
+  background: rgb(37, 37, 37);
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border: 2px solid var(--primary-color);
+}
+
+button:hover{
+    background: transparent;
+    color: var(--primary-color);
+}
+
+.show-modal,
+.modal-box {
+  /* position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+section.active .show-modal {
+    display: none;
+  }
+  .overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+  }
+  section.active .overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .modal-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  section.active .modal-box {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .modal-box i{
+    font-size: 50px;
+    color: rgb(72, 180, 72);
+  }
+
+  .modal-box h2{
+    color: rgb(31, 50, 255);
+    font-size: 30px;
+  }
+
+  .modal-box h3{
+    color: rgb(0, 3, 35);
+    font-size: 18px;
+    text-align: center;
+  }

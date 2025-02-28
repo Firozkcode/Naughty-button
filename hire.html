@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specially For You</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fontawesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+</head>
+<body>
+    <section>
+        <div class="container">
+          <h1>Do you want to hire me?</h1>
+          <div class="button-container">
+            <button class="show-modal">I Do</button>
+            <button id="negative-button">No Way</button>
+          </div>
+        </div>
+        <span class="overlay"></span>
+
+        <div class="modal-box">
+            <i class="fa-regular fa-circle-check"></i>
+            <h2>Thank You!!</h2>
+            <h3>You Just Hired me, I will response you ASAP</h3>
+    
+            <div class="button-container">
+              <a href="https://www.instagram.com/code_real_ease/"><button class="close-btn">Let's Chat</button></a>
+              <!-- <button>Open Chat</button> -->
+            </div>
+          </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const noButton = document.getElementById("negative-button");
+
+            noButton.addEventListener("mousemove", function () {
+                const x = Math.floor(Math.random() * (window.innerWidth - noButton.clientWidth));
+                const y = Math.floor(Math.random() * (window.innerHeight - noButton.clientHeight));
+                noButton.style.position = "absolute";
+                noButton.style.left = `${x}px`;
+                noButton.style.top = `${y}px`;
+            });
+        });
+
+        const section = document.querySelector("section"),
+        overlay = document.querySelector(".overlay"),
+        showBtn = document.querySelector(".show-modal"),
+        closeBtn = document.querySelector(".close-btn");
+
+      showBtn.addEventListener("click", () => section.classList.add("active"));
+
+      overlay.addEventListener("click", () =>
+        section.classList.remove("active")
+      );
+
+      closeBtn.addEventListener("click", () =>
+        section.classList.remove("active")
+      );
+
+
+    </script>
+</body>
+</html>
