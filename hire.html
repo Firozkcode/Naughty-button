@@ -14,22 +14,20 @@
 </head>
 <body>
     <section>
-        <div class="container">
-          <h1>Do you want to hire me?</h1>
-          <div class="button-container">
+        <h1>Do you trust me the most?</h1>
+        <div class="button-container">
             <button class="show-modal">I Do</button>
             <button id="negative-button">No Way</button>
-          </div>
         </div>
         <span class="overlay"></span>
 
         <div class="modal-box">
-            <i class="fa-regular fa-circle-check"></i>
-            <h2>Thank You!!</h2>
-            <h3>You Just Hired me, I will response you ASAP</h3>
+            <i class="fa-regular fa-heart"></i>
+            <h2>Congratulations!!</h2>
+            <h3>You have sucessfully created unbreakable bond.</h3>
     
             <div class="button-container">
-              <a href="https://www.instagram.com/code_real_ease/"><button class="close-btn">Let's Chat</button></a>
+              <a href="https://www.instagram.com/its_f_i_r_o_z__k_h_a_n_97/?igsh=cGY4ZnhqaDczbW00"><button class="close-btn">Let's Chat</button></a>
               <!-- <button>Open Chat</button> -->
             </div>
           </div>
@@ -39,7 +37,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             const noButton = document.getElementById("negative-button");
 
-            noButton.addEventListener("mousemove", function () {
+            noButton.addEventListener("click", function () {
                 const x = Math.floor(Math.random() * (window.innerWidth - noButton.clientWidth));
                 const y = Math.floor(Math.random() * (window.innerHeight - noButton.clientHeight));
                 noButton.style.position = "absolute";
